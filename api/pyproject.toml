@@ -1,0 +1,23 @@
+[project]
+name = "annie-api"
+version = "0.0.0"
+description = ""
+requires-python = ">=3.13"
+dependencies = [
+    "flask",
+    "gunicorn",
+    "requests",
+    "sqlalchemy",
+    "spacy",
+    "pymupdf",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "mypy",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
