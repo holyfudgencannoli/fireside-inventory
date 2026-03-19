@@ -5,12 +5,15 @@ from flask import Flask, request
 from flask_cors import CORS
 from config import Config
 from db import Base, engine
+<<<<<<< HEAD
 from flask_socketio import SocketIO
 from stt import socket_io as stt_socket
 from flask_socketio import SocketIO, emit
 from flask import request
 
 from stt.recognizer import STTRecognizer
+=======
+>>>>>>> aa05fc8bb9a1d60f24160b55a4e2fa93ffb8bfd6
 
 def create_app():
     app = Flask(__name__)
@@ -21,6 +24,7 @@ def create_app():
     import models
 
     Base.metadata.create_all(bind=engine)
+<<<<<<< HEAD
     
     socketio = SocketIO(app, cors_allowed_origins="*", logger=True, engineio_logger=True)
     
@@ -45,3 +49,9 @@ def create_app():
         }, to=sid)
 
     return app, socketio
+=======
+
+
+
+    return app
+>>>>>>> aa05fc8bb9a1d60f24160b55a4e2fa93ffb8bfd6
